@@ -1,51 +1,74 @@
 # 🎬 Netflix Content Strategy & Analytics - Final Case Study
 
-**A Comprehensive Data Analytics Project for the SWYNEX Technologies Virtual Internship.**
-
-## 1. Problem Statement
-The streaming industry is highly competitive. To maintain market leadership, streaming platforms must constantly adapt their content libraries to match viewer preferences and global trends. The objective of this project is to analyze the Netflix catalog to uncover key trends in content distribution, geographical reach, and target demographics, ultimately providing actionable business insights for future content acquisition strategies.
-
-## 2. Dataset Information
-* **Source:** Kaggle (Netflix Movies and TV Shows Dataset)
-* **Size:** 7,770 records across 12 attributes.
-* **Key Variables:** `show_id`, `type` (Movie/TV Show), `title`, `director`, `cast`, `country`, `date_added`, `release_year`, `rating`, `duration`, `genres`.
-
-## 3. Data Cleaning & Preparation
-The raw data contained inconsistencies which were resolved using **Python (Pandas)**:
-* **Duplicate Removal:** Identified and dropped exact duplicate rows to maintain data integrity.
-* **Handling Missing Values:** 
-  * Imputed missing `director`, `cast`, and `country` values with 'Unknown'.
-  * Dropped records with missing critical temporal data (`date_added`).
-* **Data Type Standardization:** Parsed messy string dates into proper Python `DateTime` objects for accurate time-series analysis.
-
-## 4. Exploratory Data Analysis (EDA)
-Using **Matplotlib** and **Seaborn**, statistical analysis was performed to uncover initial patterns:
-* Calculated the distinct ratio of Movies to TV Shows.
-* Identified peak release years and content growth velocity.
-* Mapped the top 10 content-producing nations.
-* *Code and initial charts are available in the `Python_EDA/` folder.*
-
-## 5. Interactive Dashboard (Power BI)
-An interactive, dark-themed Power BI dashboard was developed to visualize the findings for business stakeholders. 
-
-### 📊 Dashboard Previews
-
-**1. Content Distribution & Yearly Trends Overview**
-![Dashboard 1](PowerBI_Dashboard/pb1.png)
-
-**2. Global Reach & Demographics**
-![Dashboard 2](PowerBI_Dashboard/pb2.jpeg)
-
-**3. Release Trends & Top Countries Treemap**
-![Dashboard 3](PowerBI_Dashboard/pb3.jpeg)
-
-## 6. Key Business Insights
-Based on the end-to-end analysis, here are the top 5 strategic insights:
-1. **Movie-Centric Library:** Movies dominate the platform, constituting **69.14%** (5,372 titles) of the catalog compared to **30.86%** for TV Shows.
-2. **Key Geographical Markets:** The **United States** (3,287 titles) and **India** (990 titles) are the primary drivers of content volume, highlighting India's critical role in Netflix's international expansion strategy.
-3. **Targeting Mature Audiences:** Over 60% of the content is rated **TV-MA** (2,861 titles) and **TV-14** (1,928 titles), indicating a strong strategic focus on mature, young-adult, and adult demographics rather than children's programming.
-4. **Acquisition Boom (2017-2019):** There was an aggressive spike in content acquisition peaking around 2017-2019, followed by a stabilization period.
-5. **Genre Popularity:** **International Movies (2,437)** and **Dramas (2,105)** are the most saturated genres, reinforcing the platform's global and narrative-driven approach.
+**Final Data Analytics Project for the SWYNEX Technologies Virtual Internship.**
 
 ---
-**Tools Used Throughout the Project:** Python, Pandas, Matplotlib, Seaborn, Google Colab, Microsoft Power BI.
+
+## 📌 1. Project Overview & Problem Statement
+The streaming industry is highly competitive, requiring platforms like Netflix to continuously analyze their content catalog to optimize acquisition strategies and maintain global subscriber engagement.
+
+The goal of this project is to perform an end-to-end data analytics case study on the Netflix catalog. Using **Python (Pandas, Matplotlib, Seaborn)** for data cleaning and EDA, along with **Power BI** for interactive visualizations, this study uncovers critical trends in content distribution, geographical reach, target audience demographics, and chronological growth.
+
+---
+
+## 📊 2. Dataset Information
+* **Source:** Kaggle (Netflix Movies and TV Shows Dataset)
+* **Total Records:** 7,770 titles across 12 attributes (after cleaning).
+* **Key Columns:** `show_id`, `type` (Movie/TV Show), `title`, `director`, `cast`, `country`, `date_added`, `release_year`, `rating`, `duration`, `genres`.
+
+---
+
+## 🧹 3. Data Cleaning & Preparation
+Data preprocessing was conducted using **Python (Pandas)** to ensure data accuracy and readiness for analysis:
+1. **Duplicate Removal:** Checked and dropped duplicate rows to preserve data integrity.
+2. **Handling Null Values:** 
+   * Replaced missing text values in `director`, `cast`, and `country` with `'Unknown'`.
+   * Dropped rows missing critical datetime information (`date_added`).
+3. **Data Type Conversion:** Standardized string date entries into proper Python `DateTime` formats for time-series evaluation.
+
+---
+
+## 📈 4. Exploratory Data Analysis (EDA)
+Using **Matplotlib** and **Seaborn**, exploratory data analysis was conducted to uncover initial statistical distributions:
+* Evaluated the distinct volume split between Movies and TV Shows.
+* Identified historical release year trends and catalog expansion velocity.
+* Analyzed top content-producing nations and audience rating classifications.
+
+---
+
+## 🖥️ 5. Interactive Dashboards (Power BI)
+
+An interactive, dark-themed Power BI dashboard suite was developed to communicate findings effectively.
+
+### 📌 Dashboard 1: Content Distribution & Trend Overview
+![Dashboard 1](PowerBI/pb1.png)
+
+### 📌 Dashboard 2: Global Reach & Audience Demographics
+![Dashboard 2](PowerBI/pb2.jpeg)
+
+### 📌 Dashboard 3: Release Trends & Top Countries Treemap
+![Dashboard 3](PowerBI/pb3.jpeg)
+
+---
+
+## 💡 6. Key Business Insights
+Based on the comprehensive analysis, here are the top 5 strategic findings:
+
+1. **Movie Dominance:** Movies make up **69.14%** (5,372 titles) of the catalog compared to **30.86%** (2,398 titles) for TV Shows.
+2. **Top Geographical Markets:** The **United States** (3,287 titles) and **India** (990 titles) are the leading producers of content, highlighting India's critical strategic role in international content expansion.
+3. **Mature Demographic Focus:** Over **60%** of the content library is rated **TV-MA** (2,861 titles) and **TV-14** (1,928 titles), indicating a strong strategic focus on mature and young-adult demographics.
+4. **Acquisition Spike (2017–2019):** Content acquisition experienced a massive boom between 2017 and 2019 (peaking at 2,136 additions in 2019), followed by stabilization in 2020/2021.
+5. **Genre Saturation:** **International Movies (2,437)**, **Dramas (2,105)**, and **Comedies (1,471)** represent the highest volume of content, reinforcing Netflix's narrative-driven global approach.
+
+---
+
+## 🛠️ 7. Tools & Technologies Used
+* **Programming Language:** Python
+* **Data Processing:** Pandas, NumPy
+* **Data Visualization:** Matplotlib, Seaborn
+* **Business Intelligence (BI):** Microsoft Power BI
+* **Environment:** Google Colab, Power BI Desktop
+
+---
+
+## 📁 8. Repository Structure
